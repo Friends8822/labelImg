@@ -248,7 +248,7 @@ class MainWindow(QMainWindow, WindowMixin):
 
         open_next_image = action(get_str('nextImg'), self.open_next_image, 'd', 'next', get_str('nextImgDetail'))
         open_prev_image = action(get_str('prevImg'), self.open_prev_image, 'a', 'prev', get_str('prevImgDetail'))
-        # open_next_image_with_copy = action(get_str('nextImgWithCopy'), self.open_next_image_with_copy, 'Shift+d', 'next', get_str('nextImgWithCopyDetail'))
+        open_next_image_with_copy = action(get_str('nextImgWithCopy'), self.open_next_image_with_copy, 'Shift+d', 'next', get_str('nextImgWithCopyDetail'))
         
         verify = action(get_str('verifyImg'), self.verify_image, 'space', 'verify', get_str('verifyImgDetail'))
 

@@ -106,7 +106,7 @@ class MainWindow(QMainWindow, WindowMixin):
         get_str = lambda str_id: self.string_bundle.get_string(str_id)
         
         # Registration and trial management
-        self.check_license_and_trial()
+        #self.check_license_and_trial()
 
         # Save as Pascal voc xml
         self.default_save_dir = default_save_dir

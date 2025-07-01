@@ -582,33 +582,33 @@ class MainWindow(QMainWindow, WindowMixin):
 
     # Support Functions #
     def set_format(self, save_format):
-        if save_format == FORMAT_PASCALVOC:
+        #if save_format == FORMAT_PASCALVOC:
             self.actions.save_format.setText(FORMAT_PASCALVOC)
             self.actions.save_format.setIcon(new_icon("format_voc"))
             self.label_file_format = LabelFileFormat.PASCAL_VOC
             LabelFile.suffix = XML_EXT
 
-        elif save_format == FORMAT_YOLO:
-            self.actions.save_format.setText(FORMAT_YOLO)
-            self.actions.save_format.setIcon(new_icon("format_yolo"))
-            self.label_file_format = LabelFileFormat.YOLO
-            LabelFile.suffix = TXT_EXT
+        #elif save_format == FORMAT_YOLO:
+         #   self.actions.save_format.setText(FORMAT_YOLO)
+          #  self.actions.save_format.setIcon(new_icon("format_yolo"))
+       #  self.label_file_format = LabelFileFormat.YOLO
+        #    LabelFile.suffix = TXT_EXT
 
-        elif save_format == FORMAT_CREATEML:
-            self.actions.save_format.setText(FORMAT_CREATEML)
-            self.actions.save_format.setIcon(new_icon("format_createml"))
-            self.label_file_format = LabelFileFormat.CREATE_ML
-            LabelFile.suffix = JSON_EXT
+        #elif save_format == FORMAT_CREATEML:
+         #   self.actions.save_format.setText(FORMAT_CREATEML)
+        #    self.actions.save_format.setIcon(new_icon("format_createml"))
+        #    self.label_file_format = LabelFileFormat.CREATE_ML
+         #   LabelFile.suffix = JSON_EXT
 
     def change_format(self):
-        if self.label_file_format == LabelFileFormat.PASCAL_VOC:
-            self.set_format(FORMAT_YOLO)
-        elif self.label_file_format == LabelFileFormat.YOLO:
-            self.set_format(FORMAT_CREATEML)
-        elif self.label_file_format == LabelFileFormat.CREATE_ML:
+        #if self.label_file_format == LabelFileFormat.PASCAL_VOC:
+            #self.set_format(FORMAT_YOLO)
+        #elif self.label_file_format == LabelFileFormat.YOLO:
+            #self.set_format(FORMAT_CREATEML)
+        #elif self.label_file_format == LabelFileFormat.CREATE_ML:
             self.set_format(FORMAT_PASCALVOC)
-        else:
-            raise ValueError('Unknown label file format.')
+        #else:
+            #raise ValueError('Unknown label file format.')
         self.set_dirty()
 
     def no_shapes(self):
